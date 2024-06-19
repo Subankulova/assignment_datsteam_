@@ -99,7 +99,6 @@ public class APISteps {
         String actualFirstname = RestAssuredUtils.getResponseField("firstname");
         String actualLastname = RestAssuredUtils.getResponseField("lastname");
 
-        // Отладочный вывод для проверки полученных значений
         System.out.println("Actual firstname: " + actualFirstname);
         System.out.println("Actual lastname: " + actualLastname);
 
@@ -132,14 +131,12 @@ public class APISteps {
     public void verifyResponseBodyHasAData() {
         String responseBody = response.getBody().asString();
         Assert.assertFalse(responseBody.isEmpty(), "Response body is empty");
-        Assert.assertTrue(responseBody.contains("bookingId"), "Response does not contain booking data");
+        Assert.assertTrue(responseBody.contains("bookingId"));
 
-        // Преобразование JSON в список объектов с полем bookingid
-        Type listType = new TypeToken<List<BookingId>>() {}.getType();
+         Type listType = new TypeToken<List<BookingId>>() {}.getType();
         List<BookingId> bookingIds = gson.fromJson(responseBody, listType);
 
-        // Проверка наличия хотя бы одного объекта с bookingid
-        boolean hasBookingId = false;
+         boolean hasBookingId = false;
         for (BookingId bookingId : bookingIds) {
             if (bookingId.getBookingId() > 0) {
                 hasBookingId = true;
@@ -147,7 +144,7 @@ public class APISteps {
             }
         }
 
-        Assert.assertTrue(hasBookingId, "Response does not contain booking data");
+        Assert.assertTrue(hasBookingId);
     }
 
     @And("set body with invalid {string} for the create booking request")
@@ -174,7 +171,7 @@ public class APISteps {
     public void verifyStatusCodeIs(String expectedStatusCode) {
         int statusCode = Integer.parseInt(expectedStatusCode);
         int actualStatusCode = RestAssuredUtils.getStatusCode();
-        Assert.assertEquals(actualStatusCode, statusCode, "Status code mismatch!");
+        Assert.assertEquals(actualStatusCode, statusCode);
     }
 }
 

@@ -1,38 +1,17 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+Feature: Validate the functionality get booking api
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
+Scenario: Get non-existent booking (passed)
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+Scenario: Verify user can filter Booking By Date (failed) bug Expected :true Actual   :false
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+Scenario: Verify user can filter Booking By Name  (failed) bug Expected :true Actual   :false
 
-### VS Code ###
-.vscode/
+Scenario: Verify user can retrieve list of booking  (failed) bug bug Expected :400  Actual   :200
 
-### Mac OS ###
-.DS_Store
+Scenario: Create a booking with invalid dates  (failed) bug Expected :400  Actual   :200
+
+Scenario Outline: Verify user cannot create a booking with invalid datas in firstname (failed) bug Expected :400  Actual:200
+
+Scenario: Verify user can create a booking (passed)
+
+Scenario: Verify user can create token  (passed)

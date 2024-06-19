@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf57436-2be9-4a73-9041-525910f10506" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traget/cucumber-reports.html" beforeDir="false" />
+    <list default="true" id="faf57436-2be9-4a73-9041-525910f10506" name="Changes" comment="d">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/steps/APISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/steps/APISteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,9 +133,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestRunner" />
+        <item itemvalue="TestNG.TestRunner.runScenario" />
         <item itemvalue="Cucumber Java.Feature: GetBookingApiTest" />
         <item itemvalue="TestNG./Users/subankulova/IdeaProjects/TestNG_Cucumber/src/test/resources/testng.xml" />
-        <item itemvalue="TestNG.TestRunner.runScenario" />
         <item itemvalue="TestNG.TestRunner (1)" />
       </list>
     </recent_temporary>
@@ -156,6 +156,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

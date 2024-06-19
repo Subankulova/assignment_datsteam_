@@ -25,17 +25,9 @@ public class TestRunner {
     @SuppressWarnings("unused")
     @Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
     public void runScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
-        // the 'featureWrapper' parameter solely exists to display the feature
-        // file in a test report
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
     }
 
-    /**
-     * Returns two dimensional array of {@link PickleWrapper}s with their
-     * associated {@link FeatureWrapper}s.
-     *
-     * @return a two dimensional array of scenarios features.
-     */
     @DataProvider
     public Object[][] scenarios() {
         if (testNGCucumberRunner == null) {

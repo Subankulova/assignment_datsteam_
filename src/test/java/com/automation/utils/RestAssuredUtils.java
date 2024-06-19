@@ -44,12 +44,10 @@ public class RestAssuredUtils {
     public static String getResponseField(String path) {
         Object fieldValue = JsonPath.from(response.asString()).get(path);
         if (fieldValue instanceof List) {
-            // Преобразование списка в строку, используя первый элемент
-            List<String> listValue = (List<String>) fieldValue;
+             List<String> listValue = (List<String>) fieldValue;
             return listValue.isEmpty() ? null : listValue.get(0);
         } else {
-            // Преобразование других типов данных (например, строки, числа) в строку
-            return String.valueOf(fieldValue);
+             return String.valueOf(fieldValue);
         }
     }
 
